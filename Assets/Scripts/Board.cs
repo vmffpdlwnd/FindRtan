@@ -21,7 +21,8 @@ public class Board : MonoBehaviour
             float y = (i / 4) * 1.4f - 3.0f;
 
             go.transform.position = new Vector2(x, y);
-            //go.GetComponent<Card>().Setting(arr[i]);
+            go.GetComponent<Card>().Setting(arr[i]);
         }
+        GameManager.Instance.cardCount = arr.Length;
     }
 }
